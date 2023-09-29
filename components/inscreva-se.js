@@ -6,11 +6,12 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
+  ScrollView
 } from 'react-native';
 
 export default function Inscreva_se({ navigation }) {
   return (
-    <View>
+    <ScrollView>
       <View style={styles.containerimage}>
         <Image source={require('../img/logo1.png')} style={styles.logo}></Image>
       </View>
@@ -59,7 +60,7 @@ export default function Inscreva_se({ navigation }) {
               onPress={() => {
                 navigation.navigate('Home');
               }}>
-              <Text style={{ color: 'white', fontWeight: 'bold' }}>
+              <Text style={{ color: 'white', fontWeight: 'bold', textAlign: 'center',}}>
                 Inscreva-se
               </Text>
             </TouchableOpacity>
@@ -75,7 +76,7 @@ export default function Inscreva_se({ navigation }) {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -84,7 +85,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#24132C',
     borderRadius: 6,
     padding: 10,
-    textAlign: 'center',
     marginTop: 15,
   },
 
