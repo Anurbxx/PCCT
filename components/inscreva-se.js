@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 
   containerimage: {
     width: '100%',
-    height: 270,
+    height: 180,
     backgroundColor: '#24142E',
     alignItems: 'center',
     justifyContent: 'center',
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    padding: 30,
+    padding: 20,
     marginTop: 10,
   },
 

@@ -77,7 +77,7 @@ const App = () => {
             },
           }}
         />
-        <Stack.Screen name="Pré-socráticos (VI a IV a.C)" component={Historia} 
+        <Stack.Screen name="Biologia" component={Historia} 
         options={{
           headerStyle:{
             backgroundColor: '#24132C',
@@ -85,7 +85,7 @@ const App = () => {
            headerTintColor: '#ffffff',
         }}   
             />
-        <Stack.Screen name="Filosofia Clássica(V a IV a.C)" component={Historia2}
+        <Stack.Screen name="Filosofia" component={Historia2}
         options={{
           headerStyle:{
             backgroundColor: '##24132C',
@@ -93,7 +93,7 @@ const App = () => {
            headerTintColor: '#ffffff',
         }} 
             />
-         <Stack.Screen name="Filosofia Helenística(III a I a.C)" component={Historia3}
+         <Stack.Screen name="Fisíca" component={Historia3}
          options={{
           headerStyle:{
             backgroundColor: '##24132C',
@@ -101,6 +101,46 @@ const App = () => {
            headerTintColor: '#ffffff',
         }} 
          />
+
+        <Stack.Screen name="Geografia" component={Historia3}
+         options={{
+          headerStyle:{
+            backgroundColor: '##24132C',
+           }, 
+           headerTintColor: '#ffffff',
+        }} 
+         />
+
+        <Stack.Screen name="Literatura" component={Historia3}
+         options={{
+          headerStyle:{
+            backgroundColor: '##24132C',
+           }, 
+           headerTintColor: '#ffffff',
+        }} 
+         />
+
+        <Stack.Screen name="Matemática" component={Historia3}
+         options={{
+          headerStyle:{
+            backgroundColor: '##24132C',
+           }, 
+           headerTintColor: '#ffffff',
+        }} 
+         />
+
+        <Stack.Screen name="Portugûes" component={Historia3}
+         options={{
+          headerStyle:{
+            backgroundColor: '##24132C',
+           }, 
+           headerTintColor: '#ffffff',
+        }} 
+         />
+
+
+
+
 
       </Stack.Navigator>
     </NavigationContainer>
