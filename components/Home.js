@@ -8,12 +8,16 @@ export default function HomeScreen({ navigation }) {
 
   function Disciplina({title, image}){
     return(
-      <View style={{flexDirection: 'row', backgroundColor: '#FFF'}}>
-        <Image
-          source={image}
-          style={{height: 50, width: 50}}
-        />
-        <Text>{title}</Text>
+      <View style={styles.disciplinas}>
+        <View style={{width: '15%'}}>
+          <Image
+            source={image}
+            style={{height: 50, width: 50}}
+          />
+        </View>
+        <View style={{justifyContent:"center", alignItems: "center", width: '70%'}}>
+          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{title}</Text>
+        </View>
       </View>
     )
   }
@@ -24,20 +28,21 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.sectionstyle}>
           <Text style={styles.text}> Olá, vamos estudar? </Text>
         </View>
+
         <TouchableOpacity onPress={() => { navigation.navigate('Biologia') }}>
           <Disciplina title={'Biologia'} image={require('../img/genetica.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Botao} onPress={() => { navigation.navigate('Biologia') }}>
-          <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center', alignItems: 'center', marginTop: 25 }}>Biologia</Text>
+
+        <TouchableOpacity onPress={() => { navigation.navigate('Filosofia') }}>
+          <Disciplina title={'Filosofia'} image={require('../img/genetica.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Botao} onPress={() => { navigation.navigate('Biologia') }}>
-          <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center', alignItems: 'center', marginTop: 25 }}>Biologia</Text>
+
+        <TouchableOpacity onPress={() => { navigation.navigate('Física') }}>
+          <Disciplina title={'Física'} image={require('../img/fisica.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Botao} onPress={() => { navigation.navigate('Biologia') }}>
-          <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center', alignItems: 'center', marginTop: 25 }}>Biologia</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.Botao} onPress={() => { navigation.navigate('Biologia') }}>
-          <Text style={{ color: 'black', fontWeight: 'bold', textAlign: 'center', alignItems: 'center', marginTop: 25 }}>Biologia</Text>
+
+        <TouchableOpacity onPress={() => { navigation.navigate('Geografia') }}>
+          <Disciplina title={'Geografia'} image={require('../img/genetica.png')}/>
         </TouchableOpacity>
       </View>
 
@@ -53,17 +58,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   sectionstyle: {
-    marginTop: 10,
+    marginTop: 20,
     paddingHorizontal: 60,
-    paddingVertical: 10,
+    paddingVertical: 20,
     borderRadius: 20,
     backgroundColor: 'rgb(255, 255 ,255)',
+    marginBottom: 15
   },
 
   text: {
     fontWeight: 'bold',
-    alignItems: 'center',
+    textAlign: 'center',
     marginTop: 4,
+    fontSize: 20
   },
 
   Botao: {
@@ -76,6 +83,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
 
   },
+  disciplinas: {
+    flexDirection: 'row',
+    backgroundColor: '#FFF',
+    padding: 20,
+    borderRadius: 10,
+    alignItems: "center",
+    marginTop: 10
+  }
 
 })
 
