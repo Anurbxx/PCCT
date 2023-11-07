@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -5,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home'
 import Conteudo from '../screens/conteudo'
 import Salvos from '../screens/salvos'
-
+import Login from '../screens/Login'
 
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
@@ -14,9 +15,27 @@ import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+const StackAuth = createNativeStackNavigator();
+
+function RouteAuth(){
+    return(
+        <StackAuth.Navigator>
+            <StackAuth.Screen
+                name="Login"
+                component={Login}
+                options={{ headerShown: false }}
+            />
+
+            {/*<StackAuth.Screen
+            name="Inscreva_se"
+            component={Inscreva_se}
+            options={{ headerShown: false }}
+/>*/}
+        </StackAuth.Navigator>
+    )
+}
 
 function HomeStack() {
     return (
@@ -37,12 +56,13 @@ function HomeStack() {
   }
 
 export function Routes () {
+    const [auth, setAuth] = useState(false);
     return(
         <Tab.Navigator
             screenOptions={{
                 tabBarActiveTintColor:'white',
                 tabBarShowLabel: false,
-                headerShown: false,
+                
                 tabBarHideOnKeyboard: true,
 
                 tabBarStyle:{
@@ -53,13 +73,20 @@ export function Routes () {
                 }
                    
             }}
-                    
+            initialRouteName='RouteAuth'  
         >
             <Tab.Screen
                 name="TelaHome"
                 component={HomeStack}
                 options={{
-                    headerShown: false,
+                    title: 'Home',
+                    headerStyle: {
+                        backgroundColor: '#24132C',
+                      },
+                      headerTintColor: '#fff',
+                      headerTitleStyle: {
+                        fontWeight: 'bold',
+                      },
                     tabBarIcon: ({color , size , focused}) => {
                         if(focused){
                             return <Ionicons name="home" size={24} color="#24132C" />
@@ -95,11 +122,15 @@ export function Routes () {
                     }
                 }}
             />
-            
-            
-            
-            
-
+            <Tab.Screen
+                name="RouteAuth"
+                component={RouteAuth}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                    tabBarStyle: { display: 'none' },
+                }}
+            />
         </Tab.Navigator>
     )
 }
