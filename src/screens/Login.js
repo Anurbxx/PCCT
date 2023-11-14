@@ -47,7 +47,7 @@ export default function Login({navigation}){
               </TouchableOpacity>
 
               <TouchableOpacity
-                onPress={(()=>{navigation.navigate("Inscreva_se")})}
+                onPress={(()=>{navigation.navigate("inscreva-se")})}
               >
                 <Text style={styles.forgetpass}>Inscreva-se</Text>
               </TouchableOpacity>
