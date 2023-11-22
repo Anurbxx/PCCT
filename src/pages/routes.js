@@ -1,27 +1,30 @@
+//Importações do React Native em Geral do Core Components
 import React, { useState } from 'react'
+import {Button, View } from 'react-native'
+//Importações do React Navigation
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+//Importaçã de ícones
+import { Ionicons, FontAwesome, AntDesign } from '@expo/vector-icons';
 
-import Home from '../screens/Home'
-import Conteudo from '../screens/Conteudo'
-import Salvos from '../screens/salvos'
+//Importações da pilha de autenticação
 import Login from '../screens/Login'
 import Inscreva_se from '../screens/Inscreva-se'
+
+//Importações da pilha de navegação principal
+import Home from '../screens/Home'
+import Salvos from '../screens/salvos'
 import Cronograma from '../screens/Cronograma'
 import Perfil from '../screens/Perfil'
 
-import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
-import { SimpleLineIcons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
+//Importações das Rotas de Disciplinas
+import RouteBiologia from '../screens/biologia/routebiologia';
+import RouteFilosofia from '../screens/filosofia/routefilosofia';
+//Criação das pilhas de navegação
 
-
-
-const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
-const StackAuth = createNativeStackNavigator();
+const MainTab = createBottomTabNavigator(); //Pilha principal
+const StackAuth = createNativeStackNavigator(); //Pilha de Autenticação
 
 function RouteAuth() {
     return (
@@ -41,28 +44,11 @@ function RouteAuth() {
     )
 }
 
-function HomeStack() {
-    return (
-        <Stack.Navigator
-            screenOptions={{
-                headerShown: false,
-            }}>
-
-            <Stack.Screen
-                name="TelaHome"
-                component={Home}
-            />
-
-
-
-        </Stack.Navigator>
-    );
-}
 
 export function Routes() {
     const [auth, setAuth] = useState(false);
     return (
-        <Tab.Navigator
+        <MainTab.Navigator
             screenOptions={{
                 tabBarActiveTintColor: 'white',
                 tabBarShowLabel: false,
@@ -79,9 +65,9 @@ export function Routes() {
             }}
             initialRouteName='RouteAuth'
         >
-            <Tab.Screen
-                name="HomeStack"
-                component={HomeStack}
+            <MainTab.Screen
+                name="Home"
+                component={Home}
                 options={{
                     title: 'Home',
                     headerStyle: {
@@ -100,8 +86,7 @@ export function Routes() {
                 }}
             />
             
-
-            <Tab.Screen
+            <MainTab.Screen
                 name="TelaSalvos"
                 component={Salvos}
                 options={{
@@ -115,7 +100,7 @@ export function Routes() {
                 }}
             />
 
-            <Tab.Screen
+            <MainTab.Screen
                 name="Cronograma"
                 component={Cronograma}
                 options={{
@@ -129,7 +114,7 @@ export function Routes() {
                 }}
             /> 
 
-            <Tab.Screen
+            <MainTab.Screen
                 name="Perfil"
                 component={Perfil}
                 options={{
@@ -143,7 +128,7 @@ export function Routes() {
                 }}
             /> 
 
-            <Tab.Screen
+            <MainTab.Screen
                 name="RouteAuth"
                 component={RouteAuth}
                 options={{
@@ -152,10 +137,22 @@ export function Routes() {
                     tabBarStyle: { display: 'none' },
                 }}
             />
-
-
-
-            
-        </Tab.Navigator>
+            <MainTab.Screen
+                name="RouteBiologia"
+                component={RouteBiologia}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+            <MainTab.Screen
+                name="RouteFilosofia"
+                component={RouteFilosofia}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+        </MainTab.Navigator>
     )
 }

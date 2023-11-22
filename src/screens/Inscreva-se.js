@@ -67,7 +67,7 @@ export default function Inscreva_se({ navigation }) {
             <View style={styles.containerforget}>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('HomeStack')
+                  navigation.navigate('Home');
                   console.log('Apertou na tela de esqueceu');
                 }}>
                 <Text style={styles.forgetpass}>Continuar sem conta</Text>

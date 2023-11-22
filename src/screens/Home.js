@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, View, Image, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView, TextInput } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { AntDesign } from '@expo/vector-icons';
 
 
@@ -39,11 +38,11 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.text}> Olá, vamos estudar? </Text>
           </View>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Biologia') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteBiologia') }}>
             <Disciplina title={'Biologia'} image={require('../../img/genetica.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Filosofia') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteFilosofia') }}>
             <Disciplina title={'Filosofia'} image={require('../../img/filosofia.png')} />
           </TouchableOpacity>
 
