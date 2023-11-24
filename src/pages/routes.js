@@ -21,6 +21,12 @@ import Perfil from '../screens/Perfil'
 //Importações das Rotas de Disciplinas
 import RouteBiologia from '../screens/biologia/routebiologia';
 import RouteFilosofia from '../screens/filosofia/routefilosofia';
+import RouteFisica from '../screens/fisica/routefisica';
+import RouteGeografia from '../screens/geografia/routegeografia';
+import RouteHistoria from '../screens/historia/routehistoria';
+import RouteLiteratura from '../screens/literatura/routeliteratura';
+import RouteMatematica from '../screens/matematica/routematematica';
+
 //Criação das pilhas de navegação
 
 const MainTab = createBottomTabNavigator(); //Pilha principal
@@ -153,6 +159,52 @@ export function Routes() {
                     tabBarItemStyle: { display: 'none' },
                 }}
             />
+
+            <MainTab.Screen
+                name="RouteFisica"
+                component={RouteFisica}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
+            <MainTab.Screen
+                name="RouteGeografia"
+                component={RouteGeografia}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
+            <MainTab.Screen
+                name="RouteHistoria"
+                component={RouteHistoria}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
+            <MainTab.Screen
+                name="RouteLiteratura"
+                component={RouteLiteratura}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
+            <MainTab.Screen
+                name="RouteMatematica"
+                component={RouteMatematica}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
         </MainTab.Navigator>
     )
 }

@@ -28,7 +28,7 @@ export default function Biologia({ navigation }) {
         <View style={styles.container}>
 
           <View style={{height: 130, marginTop: 20}}>
-            <Disciplina title={'Filosofia'} image={require('../../../img/filosofia.png')} />
+            <Disciplina title={'Geografia'} image={require('../../../img/genetica.png')} />
           </View>
             <TouchableOpacity onPress={() => { navigation.navigate('Conteudos') }}>
               <Disciplina title={'Conteúdo'} image={require('../../../img/conteudos.png')} />

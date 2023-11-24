@@ -46,23 +46,23 @@ export default function HomeScreen({ navigation }) {
             <Disciplina title={'Filosofia'} image={require('../../img/filosofia.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Física') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteFisica') }}>
             <Disciplina title={'Física'} image={require('../../img/fisica.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Geografia') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteGeografia') }}>
             <Disciplina title={'Geografia'} image={require('../../img/geografia.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('História') }}>
-            <Disciplina title={'Historia'} image={require('../../img/historia.png')} />
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteHistoria') }}>
+            <Disciplina title={'História'} image={require('../../img/historia.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Literatura') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteLiteratura') }}>
             <Disciplina title={'Literatura'} image={require('../../img/literatura.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Matematica') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteMatematica') }}>
             <Disciplina title={'Matemática'} image={require('../../img/matematica.png')} />
           </TouchableOpacity>
 
