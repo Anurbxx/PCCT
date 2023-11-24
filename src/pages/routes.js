@@ -1,6 +1,6 @@
 //Importações do React Native em Geral do Core Components
 import React, { useState } from 'react'
-import {Button, View } from 'react-native'
+import { Button, View } from 'react-native'
 //Importações do React Navigation
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,6 +11,10 @@ import { Ionicons, FontAwesome, AntDesign } from '@expo/vector-icons';
 //Importações da pilha de autenticação
 import Login from '../screens/Login'
 import Inscreva_se from '../screens/Inscreva-se'
+import EsqueceuSenha from '../screens/EsqueceuSenha';
+import PerguntaEsqSenha from '../screens/PerguntaRec';
+import NovaSenha from '../screens/NovaSenha';
+
 
 //Importações da pilha de navegação principal
 import Home from '../screens/Home'
@@ -26,6 +30,7 @@ import RouteGeografia from '../screens/geografia/routegeografia';
 import RouteHistoria from '../screens/historia/routehistoria';
 import RouteLiteratura from '../screens/literatura/routeliteratura';
 import RouteMatematica from '../screens/matematica/routematematica';
+
 
 //Criação das pilhas de navegação
 
@@ -44,6 +49,24 @@ function RouteAuth() {
             <StackAuth.Screen
                 name="inscreva-se"
                 component={Inscreva_se}
+                options={{ headerShown: false }}
+            />
+
+            <StackAuth.Screen
+                name="EsqueceuSenha"
+                component={EsqueceuSenha}
+                options={{ headerShown: false }}
+            />
+
+            <StackAuth.Screen
+                name="PerguntaRec"
+                component={PerguntaEsqSenha}
+                options={{ headerShown: false }}
+            />
+
+            <StackAuth.Screen
+                name="NovaSenha"
+                component={NovaSenha}
                 options={{ headerShown: false }}
             />
         </StackAuth.Navigator>
@@ -91,12 +114,12 @@ export function Routes() {
                     }
                 }}
             />
-            
+
             <MainTab.Screen
                 name="TelaSalvos"
                 component={Salvos}
                 options={{
-                    headerStyle:{backgroundColor: "#24132C"}, 
+                    headerStyle: { backgroundColor: "#24132C" },
                     tabBarIcon: ({ color, size, focused }) => {
                         if (focused) {
                             return <AntDesign name="heart" size={24} color="#24132C" />
@@ -118,7 +141,7 @@ export function Routes() {
                         return <AntDesign name="calendar" size={24} color="#808080" />
                     }
                 }}
-            /> 
+            />
 
             <MainTab.Screen
                 name="Perfil"
@@ -132,7 +155,7 @@ export function Routes() {
                         return <FontAwesome name="user" size={24} color="#808080" />
                     }
                 }}
-            /> 
+            />
 
             <MainTab.Screen
                 name="RouteAuth"

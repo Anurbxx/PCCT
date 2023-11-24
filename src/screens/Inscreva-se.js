@@ -13,7 +13,7 @@ export default function Inscreva_se({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.containerimage}>
-        <Image source={require('../../img/logo1.png')} style={styles.logo}></Image>
+        <Image source={require('../img/logo1.png')} style={styles.logo}></Image>
       </View>
 
       <View style={styles.containerlogin}>

@@ -41,7 +41,7 @@ export default function Login({navigation}){
             </TouchableOpacity>
             <View style={styles.containerforget}>
               <TouchableOpacity
-                onPress={(()=>{console.log('Apertou na tela de esqueceu')})}
+                onPress={(()=>{console.log('Apertou na tela de esqueceu');navigation.navigate("EsqueceuSenha")})}
               >
                 <Text style={styles.forgetpass}>Esqueceu a senha?</Text>
               </TouchableOpacity>
