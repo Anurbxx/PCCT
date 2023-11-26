@@ -22,7 +22,7 @@ export default function EsqueceuSenha({navigation}){
 
         <View style={styles.fundotransparente}>
 
-          <Text style={styles.textsenha}>Insira a senha</Text>
+          <Text style={styles.textsenha}>Insira o nome de usuário</Text>
           <TextInput
             placeholder="Usuario123"
             style={styles.input}
@@ -30,12 +30,7 @@ export default function EsqueceuSenha({navigation}){
             //onChangeText={setNomeUsuario}
           />
 
-        <Text style={styles.textsenha}>Confirmar senha</Text>
-          <TextInput
-            placeholder="Usuario123"
-            style={styles.input}
-          />
-
+       
           <TouchableOpacity style={styles.botao}>
             <Text style={styles.follow}>Enviar</Text>
           </TouchableOpacity>
@@ -93,7 +88,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(255, 255, 255, 0.2)',
     },
     textsenha:{
-      color:'black',
+      color:'white',
       padding:9
 
     },

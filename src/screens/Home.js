@@ -67,12 +67,12 @@ export default function HomeScreen({ navigation }) {
           </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Portugues') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RoutePortugues') }}>
             <Disciplina title={'Português'} image={require('../../img/portugues.png')} />
           </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => { navigation.navigate('Quimica') }}>
+          <TouchableOpacity onPress={() => { navigation.navigate('RouteQuimica') }}>
             <Disciplina title={'Química'} image={require('../../img/quimica.png')} />
           </TouchableOpacity>
         </View>

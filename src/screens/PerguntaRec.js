@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, TextInput,  Image, ScrollView, Dimensions, Alert} from "react-native";
-import Button from '../components/Button'
-import { LinearGradient } from 'expo-linear-gradient';
-import { getQuestionRecovery } from "../api/GetQuestionRecovery";
-import { checkAnswer } from "../api/CheckResponseRecovery";
+
 
 export default function PerguntaRec({navigation, route}){
 

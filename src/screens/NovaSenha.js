@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, TextInput,  Image, ScrollView, Dimensions} from "react-native";
 
-import Button from './src/components/Button'
+
 
 export default function NovaSenha({navigation, route}){
 

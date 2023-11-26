@@ -14,6 +14,7 @@ import Inscreva_se from '../screens/Inscreva-se'
 import EsqueceuSenha from '../screens/EsqueceuSenha';
 import PerguntaEsqSenha from '../screens/PerguntaRec';
 import NovaSenha from '../screens/NovaSenha';
+import TelaPerg from '../screens/TelaPerg';
 
 
 //Importações da pilha de navegação principal
@@ -30,6 +31,8 @@ import RouteGeografia from '../screens/geografia/routegeografia';
 import RouteHistoria from '../screens/historia/routehistoria';
 import RouteLiteratura from '../screens/literatura/routeliteratura';
 import RouteMatematica from '../screens/matematica/routematematica';
+import RoutePortugues from '../screens/portugues/routeportugues';
+import RouteQuimica from '../screens/quimica/routequimica';
 
 
 //Criação das pilhas de navegação
@@ -47,15 +50,22 @@ function RouteAuth() {
             />
 
             <StackAuth.Screen
-                name="inscreva-se"
+                name="Inscreva-se"
                 component={Inscreva_se}
                 options={{ headerShown: false }}
             />
 
             <StackAuth.Screen
+                name="TelaPerg"
+                component={TelaPerg}
+                options={{ headerShown: false,
+                presentation: 'transparentModal' }}
+            />
+
+            <StackAuth.Screen
                 name="EsqueceuSenha"
                 component={EsqueceuSenha}
-                options={{ headerShown: false }}
+                options={{ headerShown: false,}}
             />
 
             <StackAuth.Screen
@@ -227,6 +237,25 @@ export function Routes() {
                     tabBarItemStyle: { display: 'none' },
                 }}
             />
+
+            <MainTab.Screen
+                name="RoutePortugues"
+                component={RoutePortugues}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
+            <MainTab.Screen
+                name="RouteQuimica"
+                component={RouteQuimica}
+                options={{
+                    headerShown: false,
+                    tabBarItemStyle: { display: 'none' },
+                }}
+            />
+
 
         </MainTab.Navigator>
     )
