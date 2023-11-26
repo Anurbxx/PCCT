@@ -1,12 +1,19 @@
 import React from 'react';
-import {View,Text, TextInput,TouchableOpacity,StyleSheet,Image,ScrollView} from 'react-native';
-
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+  ScrollView
+} from 'react-native';
 
 export default function Inscreva_se({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.containerimage}>
-        <Image source={require('../../img/logo1.png')} style={styles.logo}></Image>
+        <Image source={require('../img/logo1.png')} style={styles.logo}></Image>
       </View>
 
       <View style={styles.containerlogin}>
@@ -48,14 +55,6 @@ export default function Inscreva_se({ navigation }) {
               />
             </View>
 
-            <Text style={styles.containerlt}>Perguntas de recuperação</Text>
-          {/* Aqui tem um touchable para abrir o modalscreen */}
-          <TouchableOpacity onPress={()=>{navigation.navigate('TelaPerg')}}>
-            <View style={styles.textinput}>
-              <Text style={{color: '#666'}}>Selecione aqui</Text>
-            </View>
-          </TouchableOpacity>
-
             <TouchableOpacity
               style={styles.botao}
               onPress={() => {
@@ -76,14 +75,10 @@ export default function Inscreva_se({ navigation }) {
             </View>
           </View>
         </View>
-    
       </View>
-
     </ScrollView>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   botao: {
